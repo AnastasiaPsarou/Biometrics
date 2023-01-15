@@ -8,49 +8,6 @@ class Circle:
         self.a = a
         self.b = b
         self.radius = radius
-
-#def circle_iris(a, b, img, value_to_decrease_radius, value_to_decrease_step_seed):
-#To further improve the pupil centre we should run the function a second time -
-#with the initial location from the previous set, decreased radius (by about 20)
-#and smaller step between seed points (fine grain search).
-    # initial_radius = 50 - value_to_decrease_radius
-    # upper_limit_radius = 200 - value_to_decrease_radius
-    
-    # initial_angle = 0
-    # upper_limit_angle = 360
-    
-    # step = 5
-    # seed_point_steps = 3 - value_to_decrease_step_seed
-    
-    # best_Circle = Circle(-1, -1, -1)
-    # best_bright = -1
-    # bright = 0
-    
-    # radius_range = (initial_radius, upper_limit_radius, step)
-    # angle_range = (initial_angle, upper_limit_angle, step)
-    
-    # for a_dis in range(-5,6):
-    #     for b_dis in range(-5,6):
-            
-    #         a1 = a + seed_point_steps * a_dis
-    #         b1 = b + seed_point_steps * b_dis
-            
-    #         for radius in radius_range:        
-    #             for angle in angle_range:
-                    
-    #                 a2 = radius * cos((angle*pi)/180) + a1
-    #                 b2 = radius * sin((angle*pi)/180) + b1                    
-
-            #         bright += img[b2,a2]
-                    
-            # avg_bright = bright / step
-            # bright = 0
-            
-            # if(best_bright > avg_bright):
-            #     best_bright = avg_bright
-            #     best_Circle = (a1, b1, radius)
-                 
-    # return best_Circle
     
 def exploding_circle_iris(image, a, b, value_to_decrease_radius, value_to_decrease_step_seed):
 #To further improve the pupil centre we should run the function a second time -
@@ -199,8 +156,6 @@ def main(data_path):
         #print(circle_pupil)
         #circle_pupil = circle_iris(x, y, img_no_glare, 20, 2)
 
-        # Gabor filters
-        # TODO
 
         cv2.imshow("Original image", img)
         cv2.imshow("Gray", gray)
